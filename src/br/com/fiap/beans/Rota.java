@@ -6,16 +6,16 @@ public class Rota {
     private Estacao estacaoOrigem;
     private Estacao estacaoDestino;
     private double distancia;
-    private double vel_media;
+    private double velMedia;
 
     public Rota() {
         super();
     }
 
-    public Rota(int id, double distancia, double vel_media) {
+    public Rota(int id, double distancia, double velMedia) {
         this.id = id;
         this.distancia = distancia;
-        this.vel_media = vel_media;
+        this.velMedia = velMedia;
     }
 
     public int getId() {
@@ -50,12 +50,12 @@ public class Rota {
         this.distancia = distancia;
     }
 
-    public double getVel_media() {
-        return vel_media;
+    public double getVelMedia() {
+        return velMedia;
     }
 
-    public void setVel_media(double vel_media) {
-        this.vel_media = vel_media;
+    public void setVelMedia(double velMedia) {
+        this.velMedia = velMedia;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class Rota {
 
     // Calcula o tempo de viagem estimado da rota
     public double calcularTempoViagem() {
-        return distancia / vel_media;
+        return distancia / velMedia;
     }
 
 }
